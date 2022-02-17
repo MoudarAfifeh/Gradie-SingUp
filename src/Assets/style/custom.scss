@@ -1,0 +1,100 @@
+@import "./variables.scss";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "./map-spacers.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+:root {
+    @each $spacer,
+    $value in $spacers {
+        --theme-spacer-#{$spacer}:#{$value};
+    }
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fonts;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // background: gray;
+    background: url("../img/Background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+    text-align: center;
+    .page {
+        .container {
+            .row {
+                @media only screen and (min-width: 768px) {
+                    border-radius: 15px !important;
+                }
+                background: white;
+                .left-side {
+                    background: $left-side-color;
+                    @media only screen and (min-width: 768px) {
+                        border-top-left-radius: 15px !important;
+                        border-bottom-left-radius: 15px !important;
+                    }
+                    .header-left {
+                        color: white;
+                    }
+                    .text-left {
+                        color: white;
+                        text-align-last: center;
+                    }
+                    .left-img {
+                        width: 400px;
+                        height: 475px;
+                    }
+                }
+                .right-side {
+                    background: white;
+                    padding-left: 10%;
+                    @media only screen and (min-width: 768px) {
+                        border-top-right-radius: 15px !important;
+                        border-bottom-right-radius: 15px !important;
+                    }
+                    h1 {
+                        text-align: left;
+                    }
+                    form {
+                        padding-right: 17%;
+                        .input-title {
+                            font-weight: bold;
+                            float: left;
+                        }
+                        .form-control {
+                            height: 3.3rem;
+                        }
+                        .checkbox {
+                            font-size: 22px;
+                            .custom-text {
+                                font-weight: bold;
+                                color: #013243;
+                                text-decoration: underline;
+                            }
+                        }
+                        button {
+                            background: #013243;
+                            width: 100%;
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
