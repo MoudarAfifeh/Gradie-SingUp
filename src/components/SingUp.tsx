@@ -21,7 +21,6 @@ export const SingUp = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-        console.log(checkBoxRef.current?.checked)
         if (emailRef.current?.value === "" || emailRef.current?.value === "") {
             return setError("All fields are mandatory");
         }
@@ -64,7 +63,6 @@ export const SingUp = () => {
                                 <Form.Label className='input-title'>Email</Form.Label>
                                 <Form.Control type="email" placeholder="john@example.com" ref={emailRef} />
                             </Form.Group>
-
                             <Form.Group className="mb-4" controlId="formBasicPassword">
                                 <Form.Label className='input-title'>Password</Form.Label>
                                 <Form.Control type="password" placeholder="At least 8 characters" ref={passwordRef} />
@@ -73,7 +71,7 @@ export const SingUp = () => {
                                 <Form.Check className='checkbox' type="checkbox" label={CustomComp} ref={checkBoxRef} />
                             </Form.Group>
                             <Button variant="primary" className='mb-5' type="submit">
-                                Submit
+                                Create an Account
                             </Button>
                         </Form>
                     </Col>

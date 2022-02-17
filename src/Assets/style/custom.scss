@@ -41,7 +41,7 @@ code {
                 @media only screen and (min-width: 768px) {
                     border-radius: 15px !important;
                 }
-                background: white;
+                background: $white;
                 .left-side {
                     background: $left-side-color;
                     @media only screen and (min-width: 768px) {
@@ -49,10 +49,10 @@ code {
                         border-bottom-left-radius: 15px !important;
                     }
                     .header-left {
-                        color: white;
+                        color: $white;
                     }
                     .text-left {
-                        color: white;
+                        color: $left-text;
                         text-align-last: center;
                     }
                     .left-img {
@@ -61,7 +61,7 @@ code {
                     }
                 }
                 .right-side {
-                    background: white;
+                    background: $white;
                     padding-left: 10%;
                     @media only screen and (min-width: 768px) {
                         border-top-right-radius: 15px !important;
@@ -83,12 +83,12 @@ code {
                             font-size: 22px;
                             .custom-text {
                                 font-weight: bold;
-                                color: #013243;
+                                color: $left-side-color;
                                 text-decoration: underline;
                             }
                         }
                         button {
-                            background: #013243;
+                            background: $left-side-color;
                             width: 100%;
                             font-size: 21px;
                         }
